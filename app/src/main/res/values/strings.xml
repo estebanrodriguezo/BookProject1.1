@@ -6,4 +6,18 @@
     <string name="page">Numero de paginas</string>
     <string name="resume">Resumen:</string>
     <string name="save">Guardar</string>
+    <string name="info">Nombre: %s \nAutor: %s \nPaginas: %d \nResumen: %s \nGenero(s): %s \nCalificacion %d \nFecha de Publicacion: %s</string>
+    <string name="genre">Genero</string>
+    <string name="suspense">Suspenso</string>
+    <string name="horror">Terror</string>
+    <string name="childish">Infantil</string>
+    <string name="fiction">Ficcion</string>
+    <string name="score">Calificacion</string>
+    <string name="number_one">1</string>
+    <string name="number_two">2</string>
+    <string name="number_three">3</string>
+    <string name="number_four">4</string>
+    <string name="number_five">5</string>
+    <string name="publication_date">Fecha de publicacion</string>
+    <string name="date_format">DD-MM-YYYY</string>
 </resources>
