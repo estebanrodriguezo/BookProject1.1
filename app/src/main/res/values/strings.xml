@@ -2,11 +2,11 @@
     <string name="app_name">BookProject1.1</string>
     <string name="register_book">Registro de un libro</string>
     <string name="book_name">Nombre:</string>
-    <string name="author">Autor:</string>
+    <string name="author">Author:</string>
     <string name="page">Numero de paginas</string>
     <string name="resume">Resumen:</string>
     <string name="save">Guardar</string>
-    <string name="info">Nombre: %s \nAutor: %s \nPaginas: %d \nResumen: %s \nGenero(s): %s \nCalificacion %d \nFecha de Publicacion: %s</string>
+    <string name="info">Nombre: %s \nAuthor: %s \nPaginas: %d \nResumen: %s \nGenero(s): %s \nCalificacion %d \nFecha de Publicacion: %s</string>
     <string name="genre">Genero</string>
     <string name="suspense">Suspenso</string>
     <string name="horror">Terror</string>
