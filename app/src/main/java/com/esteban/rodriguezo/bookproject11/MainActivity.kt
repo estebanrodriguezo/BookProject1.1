@@ -1,7 +1,11 @@
 package com.esteban.rodriguezo.bookproject11
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.esteban.rodriguezo.bookproject11.databinding.ActivityMainBinding
@@ -19,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(mainBinding.root)
+
+        Log.d("state","onCreate")
 
         //val nameBookEditText: EditText = findViewById(R.id.name_book_edit_text)
 
@@ -87,4 +93,55 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_overflow, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.menu_sign_out -> goToLoginActivity()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun goToLoginActivity() {
+        val intent = Intent(this, LogingActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("state","onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("state","onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("state","onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("state","onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("state","onDestroy")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("state","onRestart")
+    }
+
+
+
 }
