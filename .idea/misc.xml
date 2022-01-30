@@ -5,9 +5,12 @@
       <map>
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/drawable/ic_calendar.xml" value="0.1546875" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/layout/activity_loging.xml" value="0.21328125" />
-        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/layout/activity_main.xml" value="0.12734375" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/layout/activity_register.xml" value="0.279296875" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/layout/activity_splash.xml" value="0.166796875" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/layout/fragment_detail.xml" value="0.19453125" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/layout/fragment_list.xml" value="0.19453125" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/layout/fragment_new_book.xml" value="0.183984375" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/menu/menu_overflow.xml" value="0.21328125" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1546875" />
       </map>

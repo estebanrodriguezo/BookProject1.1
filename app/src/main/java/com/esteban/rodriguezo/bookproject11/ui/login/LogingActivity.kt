@@ -1,11 +1,12 @@
-package com.esteban.rodriguezo.bookproject11
+package com.esteban.rodriguezo.bookproject11.ui.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.esteban.rodriguezo.bookproject11.ui.register.RegisterActivity
 import com.esteban.rodriguezo.bookproject11.databinding.ActivityLogingBinding
-import kotlin.math.sin
+import com.esteban.rodriguezo.bookproject11.ui.main.MainActivity
 
 class LogingActivity : AppCompatActivity() {
 

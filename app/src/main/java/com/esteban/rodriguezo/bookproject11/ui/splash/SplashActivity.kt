@@ -1,10 +1,11 @@
-package com.esteban.rodriguezo.bookproject11
+package com.esteban.rodriguezo.bookproject11.ui.splash
 
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.esteban.rodriguezo.bookproject11.databinding.ActivitySplashBinding
+import com.esteban.rodriguezo.bookproject11.ui.login.LogingActivity
 import java.util.*
 import kotlin.concurrent.timerTask
 

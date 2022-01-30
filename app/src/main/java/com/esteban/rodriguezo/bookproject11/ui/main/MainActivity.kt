@@ -1,15 +1,14 @@
-package com.esteban.rodriguezo.bookproject11
+package com.esteban.rodriguezo.bookproject11.ui.main
 
-import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.esteban.rodriguezo.bookproject11.R
 import com.esteban.rodriguezo.bookproject11.databinding.ActivityMainBinding
-import java.text.SimpleDateFormat
+import com.esteban.rodriguezo.bookproject11.ui.login.LogingActivity
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,10 +23,10 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(mainBinding.root)
 
-        Log.d("state","onCreate")
+        Log.d("state", "onCreate")
 
         //val nameBookEditText: EditText = findViewById(R.id.name_book_edit_text)
-
+/*
         val dateSetListener = DatePickerDialog.OnDateSetListener{view, year, month, dayOfMonth ->
             cal.set(Calendar.YEAR, year)
             cal.set(Calendar.MONTH, month)
@@ -91,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
             }
-        }
+        }*/
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -100,7 +99,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
+        when (item.itemId) {
             R.id.menu_sign_out -> goToLoginActivity()
         }
         return super.onOptionsItemSelected(item)
@@ -112,36 +111,34 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    override fun onStart() {
+   /* override fun onStart() {
         super.onStart()
-        Log.d("state","onStart")
+        Log.d("state", "onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("state","onResume")
+        Log.d("state", "onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("state","onPause")
+        Log.d("state", "onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("state","onStop")
+        Log.d("state", "onStop")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("state","onDestroy")
+        Log.d("state", "onDestroy")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.d("state","onRestart")
-    }
-
-
+        Log.d("state", "onRestart")
+    }*/
 
 }

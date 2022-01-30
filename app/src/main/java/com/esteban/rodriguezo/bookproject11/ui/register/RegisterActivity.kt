@@ -1,10 +1,11 @@
-package com.esteban.rodriguezo.bookproject11
+package com.esteban.rodriguezo.bookproject11.ui.register
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.esteban.rodriguezo.bookproject11.databinding.ActivityRegisterBinding
+import com.esteban.rodriguezo.bookproject11.ui.login.LogingActivity
 
 class RegisterActivity : AppCompatActivity() {
 
