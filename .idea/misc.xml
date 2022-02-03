@@ -3,19 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/drawable/ic_add.xml" value="0.2645" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/drawable/ic_delete.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/activity_bottom.xml" value="0.259375" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/activity_drawer.xml" value="0.259375" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/activity_register.xml" value="0.259375" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/activity_tabs.xml" value="0.259375" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/app_bar_drawer.xml" value="0.259375" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/card_view_item_book.xml" value="0.259375" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/content_drawer.xml" value="0.2553846153846154" />
-        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/fragment_delete.xml" value="0.1" />
-        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/fragment_update.xml" value="0.1" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/fragment_delete.xml" value="0.259375" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/fragment_list.xml" value="0.259375" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/fragment_tabs.xml" value="0.259375" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/fragment_update.xml" value="0.259375" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/layout/nav_header_drawer.xml" value="0.259375" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/menu/activity_main_drawer.xml" value="0.259375" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/menu/bottom_nav_menu.xml" value="0.259375" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/menu/drawer.xml" value="0.259375" />
+        <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject1.1/app/src/main/res/menu/overflow_menu.xml" value="0.259375" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/drawable/ic_calendar.xml" value="0.1546875" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/layout/activity_loging.xml" value="0.21328125" />
         <entry key="..\:/Users/esteb/Desktop/s8/DISP MOVILES/BookProject11/app/src/main/res/layout/activity_main.xml" value="0.12734375" />

@@ -12,13 +12,18 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".ui.tabs.TabsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_tabs"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
             android:name=".ui.drawer.DrawerActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_drawer"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ui.bottom.BottomActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

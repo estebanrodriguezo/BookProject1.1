@@ -33,7 +33,7 @@
     <string name="todo">TODO</string>
     <string name="title_list">Libros</string>
     <string name="title_new">Agregar</string>
-    <string name="title_update">Actuaizar</string>
+    <string name="title_update">Editar</string>
     <string name="title_delete">Borrar</string>
     <string name="title_activity_drawer">DrawerActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -46,4 +46,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_tabs">TabsActivity</string>
+    <string name="search">Buscar</string>
+
 </resources>
