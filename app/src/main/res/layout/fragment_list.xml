@@ -7,20 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.list.ListFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/hello"
-        android:textColor="#DD2C00"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/new_button"
         android:layout_width="wrap_content"
@@ -33,5 +19,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:contentDescription="@string/todo"
         android:focusable="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/books_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
