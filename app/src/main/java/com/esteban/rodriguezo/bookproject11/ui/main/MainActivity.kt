@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(mainBinding.root)
 
         Log.d("state", "onCreate")
+        setContentView(mainBinding.root)
 
         //val nameBookEditText: EditText = findViewById(R.id.name_book_edit_text)
 /*

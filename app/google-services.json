@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "583953063175",
+    "project_id": "bookproject-be19b",
+    "storage_bucket": "bookproject-be19b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583953063175:android:41b90e8e59776db81779a2",
+        "android_client_info": {
+          "package_name": "com.esteban.rodriguezo.bookproject11"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583953063175-c1ckjvgohfl8j9p1h27for8ko5j98orb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIXf4SMI9tqgWv3j7OU2vKNQiY7WFcQ5o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583953063175-c1ckjvgohfl8j9p1h27for8ko5j98orb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

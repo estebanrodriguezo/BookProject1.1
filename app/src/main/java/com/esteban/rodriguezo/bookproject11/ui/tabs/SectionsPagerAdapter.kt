@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.esteban.rodriguezo.bookproject11.R
 import com.esteban.rodriguezo.bookproject11.ui.delete.DeleteFragment
+import com.esteban.rodriguezo.bookproject11.ui.list.ListFragment
 import com.esteban.rodriguezo.bookproject11.ui.newbook.NewBookFragment
 import com.esteban.rodriguezo.bookproject11.ui.update.UpdateFragment
 
@@ -26,22 +27,19 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
 
     override fun getItem(position: Int): Fragment {
         when (position) {
-
-            0 -> return com.esteban.rodriguezo.bookproject11.ui.list.ListFragment()
+            0 -> return ListFragment()
             1 -> return NewBookFragment()
             2 -> return UpdateFragment()
             else -> return DeleteFragment()
-
-
         }
     }
 
-    override fun getPageTitle(position: Int): CharSequence {
+
+    override fun getPageTitle(position: Int): CharSequence? {
         return context.resources.getString(TAB_TITLES[position])
     }
 
     override fun getCount(): Int {
-        // Show 2 total pages.
         return 4
     }
 }

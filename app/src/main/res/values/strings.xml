@@ -48,5 +48,10 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_tabs">TabsActivity</string>
     <string name="search">Buscar</string>
+    <string name="warning_title">Advertencia</string>
+    <string name="delete_book_msg">¿Desea eliminar el libro %s del autor %s?</string>
+    <string name="cancel">Cancelar</string>
+    <string name="accept">Aceptar</string>
+    <string name="update">Actualizar</string>
 
 </resources>

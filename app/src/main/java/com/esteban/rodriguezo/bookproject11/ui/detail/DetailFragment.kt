@@ -8,12 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.esteban.rodriguezo.bookproject11.databinding.FragmentDetailBinding
+import com.esteban.rodriguezo.bookproject11.R
 
 class DetailFragment : Fragment() {
 
 
     private lateinit var detailBinding: FragmentDetailBinding
-    private lateinit var detailviewModel: DetailViewModel
+    private lateinit var detailViewModel: DetailViewModel
     private val args: DetailFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -21,21 +22,20 @@ class DetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         detailBinding = FragmentDetailBinding.inflate(inflater, container, false)
-        detailviewModel = ViewModelProvider(this)[DetailViewModel::class.java]
+        detailViewModel = ViewModelProvider(this)[DetailViewModel::class.java]
         return detailBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val book = args.book
+       /*val book = args.book
 
-        with(detailBinding) {
+         with(detailBinding) {
 
-            nameBookTextView.text = book.name
-            authorTextView.text = book.author
-        }
-
+             nameBookTextView.text = book.name
+             authorTextView.text = book.author
+         }*/
     }
 
 }
