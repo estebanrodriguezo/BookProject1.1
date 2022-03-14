@@ -9,22 +9,27 @@ import androidx.appcompat.app.AppCompatActivity
 import com.esteban.rodriguezo.bookproject11.R
 import com.esteban.rodriguezo.bookproject11.databinding.ActivityMainBinding
 import com.esteban.rodriguezo.bookproject11.ui.login.LogingActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import java.util.*
+
+
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mainBinding: ActivityMainBinding
     private var cal = Calendar.getInstance()
     private var publicationDate = ""
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
-
-        setContentView(mainBinding.root)
-
         Log.d("state", "onCreate")
         setContentView(mainBinding.root)
+        auth = Firebase.auth
+
 
         //val nameBookEditText: EditText = findViewById(R.id.name_book_edit_text)
 /*
@@ -101,7 +106,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.menu_sign_out -> goToLoginActivity()
+            R.id.menu_sign_out -> {
+                auth.signOut()
+                goToLoginActivity()
+            }
         }
         return super.onOptionsItemSelected(item)
     }

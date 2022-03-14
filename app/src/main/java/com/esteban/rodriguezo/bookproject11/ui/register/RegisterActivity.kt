@@ -1,68 +1,76 @@
 package com.esteban.rodriguezo.bookproject11.ui.register
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.esteban.rodriguezo.bookproject11.databinding.ActivityRegisterBinding
-import com.esteban.rodriguezo.bookproject11.ui.login.LogingActivity
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
+import com.esteban.rodriguezo.bookproject11.server.Role
+import com.esteban.rodriguezo.bookproject11.server.User
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var registerBinding: ActivityRegisterBinding
-    private lateinit var auth: FirebaseAuth
+    private lateinit var registerViewModel: RegisterViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         registerBinding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(registerBinding.root)
+        registerViewModel = ViewModelProvider(this)[RegisterViewModel::class.java]
 
-        auth = Firebase.auth
+        registerViewModel.errorMsgDone.observe(this) { result ->
+            onErrorMsgDoneSubscribe(result)
+        }
+
+        registerViewModel.registerSucessDone.observe(this){ result->
+            onRegisterSucessDoneSubscribe(result)
+        }
 
         with(registerBinding) {
-            registerBinding.registerButton.setOnClickListener {
+            registerButton.setOnClickListener {
                 val email = emailEditText.text.toString()
                 val password = passwordEditText.text.toString()
                 val repPassword = repPasswordEditText.text.toString()
 
                 if (password == repPassword) {
-                    /*  val intent = Intent(this@RegisterActivity, LogingActivity::class.java)
-                      intent.putExtra("email",email)
-                      intent.putExtra("password",password)
-                      startActivity(intent)*/
+                    /*    val intent= Intent(this@RegisterActivity, LoginActivity::class.java)
+                        intent.putExtra("email", email)
+                        intent.putExtra("password", password)
+                        startActivity(intent)*/
 
-                    auth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                // Sign in success, update UI with the signed-in user's information
-                                Log.d("Register", "createUserWithEmail:success")
-                                onBackPressed()
-                                /*val intent = Intent(this@RegisterActivity, LogingActivity::class.java)
-                                    startActivity(intent)*/
-
-                            } else {
-                                // If sign in fails, display a message to the user.
-                                Log.w("Register", "createUserWithEmail:failure", task.exception)
-                                Toast.makeText(
-                                    baseContext, task.exception?.message.toString(),
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
-                        }
-
-
+                    registerViewModel.registerUser(email, password)
                 } else
                     Toast.makeText(
                         applicationContext,
-                        "Las Contraseñas deben ser iguales",
+                        "Las contraseñas deben ser iguales",
                         Toast.LENGTH_SHORT
                     ).show()
-
             }
+        }
+    }
+
+    private fun onRegisterSucessDoneSubscribe(uid: String?) {
+        uid?.let { Log.d("uid", it) }
+        registerViewModel.createUser(uid, registerBinding.emailEditText.text.toString())
+    }
+
+    private fun onErrorMsgDoneSubscribe(result: String?) {
+        Toast.makeText(baseContext, result, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun createUser(uid: String?, email: String) {
+        //  registerViewModel.createUser(uid)
+        val db = Firebase.firestore
+        val user = User(uid = uid, email = email, role = Role.VENDEDOR)
+        uid?.let { uid ->
+            db.collection("users").document(uid).set(user)
+                .addOnSuccessListener {
+                    Toast.makeText(baseContext, "Usuario creado exitosamente", Toast.LENGTH_SHORT).show()
+                }
         }
     }
 }

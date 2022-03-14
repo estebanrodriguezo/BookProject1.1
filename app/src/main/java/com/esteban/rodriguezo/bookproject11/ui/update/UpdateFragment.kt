@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isVisible
 import com.esteban.rodriguezo.bookproject11.databinding.FragmentUpdateBinding
 import com.esteban.rodriguezo.bookproject11.local.Book
@@ -28,9 +29,9 @@ class UpdateFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        updateViewModel.findBookDone.observe(viewLifecycleOwner, { result ->
+        updateViewModel.findBookDone.observe(viewLifecycleOwner) { result ->
             onFindBookDoneSubscribe(result)
-        })
+        }
 
         with(updateBinding) {
             searchButton.setOnClickListener {
@@ -48,22 +49,26 @@ class UpdateFragment : Fragment() {
         }
     }
 
-    private fun onFindBookDoneSubscribe(book: Book) {
-        this.book = book
-        with(updateBinding) {
-            updateFormLayout.isVisible = true
-            searchButton.isVisible = false
-            updateButton.isVisible = true
-            nameAuthorEditText.setText(book.author)
-            pagesEditText.setText(book.pages.toString())
-            abstractEditText.setText(book.resume)
-            publicationDateButton.text = book.publicationDate
-            when (book.score) {
-                1 -> oneRadioButton.isChecked = true
-                2 -> twoRadioButton.isChecked = true
-                3 -> threeRadioButton.isChecked = true
-                4 -> fourRadioButton.isChecked = true
-                else -> fiveRadioButton.isChecked = true
+    private fun onFindBookDoneSubscribe(book: Book?) {
+        if (book == null) {
+            Toast.makeText(requireContext(), "Libro no encontrado", Toast.LENGTH_SHORT).show()
+        } else {
+            this.book = book
+            with(updateBinding) {
+                updateFormLayout.isVisible = true
+                searchButton.isVisible = false
+                updateButton.isVisible = true
+                nameAuthorEditText.setText(book.author)
+                pagesEditText.setText(book.pages.toString())
+                abstractEditText.setText(book.resume)
+                publicationDateButton.text = book.publicationDate
+                when (book.score) {
+                    1 -> oneRadioButton.isChecked = true
+                    2 -> twoRadioButton.isChecked = true
+                    3 -> threeRadioButton.isChecked = true
+                    4 -> fourRadioButton.isChecked = true
+                    else -> fiveRadioButton.isChecked = true
+                }
             }
         }
     }

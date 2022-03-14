@@ -3,7 +3,8 @@ package com.esteban.rodriguezo.bookproject11.ui.newbook
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.esteban.rodriguezo.bookproject11.repository.BookRepository
+import com.esteban.rodriguezo.bookproject11.local.localrepository.BookRepository
+import com.esteban.rodriguezo.bookproject11.server.serverrepository.BookServerRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -11,6 +12,7 @@ import kotlinx.coroutines.launch
 class NewBookViewModel : ViewModel() {
 
     private val bookRepository = BookRepository()
+    private val bookServerRepository = BookServerRepository()
 
     private val msg: MutableLiveData<String> = MutableLiveData()
     val msgDone: LiveData<String> = msg
@@ -40,4 +42,9 @@ class NewBookViewModel : ViewModel() {
         }
     }
 
+    fun saveBookInServer(nameBook: String, author: String, pages: Int, resume: String, genre: String, score: Int, publicationDate: String) {
+        GlobalScope.launch(Dispatchers.IO){
+            bookServerRepository.saveBook(nameBook, author, pages, resume, genre, score, publicationDate)
+        }
+    }
 }
